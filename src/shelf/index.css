@@ -1,0 +1,38 @@
+.viewType {
+    text-align: center;
+    margin: 16px 0;
+}
+
+.btnMargin {
+    margin: 0 10px;
+    background: none;
+    border: none;
+}
+
+.cntain, .cntain1 {
+    margin: 0 10%;
+}
+
+.gridPng {
+    width: 30px;
+    height: 30px;
+}
+
+.svg-icon-nt-selected path {
+    fill: #ada2a4;
+}
+
+@media only screen and (max-width: 600px) {
+    .cntain{
+        margin: 0;
+    }
+
+    .cntain1{
+        margin: 0 15%;
+    }
+
+    .gridPng {
+        width: 20px;
+        height: 20px;
+    }
+}
