@@ -1,5 +1,6 @@
 import React from "react";
 import "./index.css";
+import { Link } from "react-router-dom";
 
 class ResultList extends React.Component {
   render() {
@@ -23,14 +24,16 @@ class ResultList extends React.Component {
             </div>
             <div className="mblView">
               <div className="mbGridView">
-                <div className="imgListView">
-                  <img src={this.props.dt.image} className="img1" alt="" />
-                  <span class="product__price-point">
-                    <span class="product__price">
-                      <span class="money">{this.props.dt.price}</span>
+                <Link to="/pdp">
+                  <div className="imgListView">
+                    <img src={this.props.dt.image} className="img1" alt="" />
+                    <span class="product__price-point">
+                      <span class="product__price">
+                        <span class="money">{this.props.dt.price}</span>
+                      </span>
                     </span>
-                  </span>
-                </div>
+                  </div>
+                </Link>
                 <div className="productTitle">{this.props.dt.productTitle}</div>
                 <span class="product__spec">
                   {this.props.dt.productSpec} |{" "}
@@ -65,21 +68,23 @@ class ResultList extends React.Component {
         )}
         {!this.props.view && (
           <div className="grdbtmMargin">
-            <div className="gridView">
-              <img src={this.props.dt.image} className="img1" alt="" />
-              <span class="product__price-point">
-                <span class="product__price">
-                  <span class="money">{this.props.dt.price}</span>
+            <Link to="/pdp">
+              <div className="gridView">
+                <img src={this.props.dt.image} className="img1" alt="" />
+                <span class="product__price-point">
+                  <span class="product__price">
+                    <span class="money">{this.props.dt.price}</span>
+                  </span>
                 </span>
-              </span>
-              <button
-                className="btn btn--default btn--submit btn--circle  js-add-to-card"
-                type="submit"
-                title="Add to bag"
-              >
-                <span>+</span>
-              </button>
-            </div>
+                <button
+                  className="btn btn--default btn--submit btn--circle  js-add-to-card"
+                  type="submit"
+                  title="Add to bag"
+                >
+                  <span>+</span>
+                </button>
+              </div>
+            </Link>
             <div className="gridMbSpec">
               <div className="productTitle">{this.props.dt.productTitle}</div>
               <span class="product__spec">
