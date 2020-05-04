@@ -100,10 +100,19 @@ input[type="submit"] {
   display: none;
 }
 
+.dskViewCn {
+  display: block;
+  padding: 20px 75px;
+}
+
 @media only screen and (max-width: 600px) {
   .mblViewCn {
     display: block;
     padding: 10px 16px;
+  }
+
+  .dskViewCn {
+    display: none;
   }
 
   .mbPdpView {
@@ -148,3 +157,30 @@ input[type="submit"] {
   color: #555;
   padding: 0 10px;
 }
+
+
+/* ===Separate into columns=== */
+
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.columnPdp {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+.rowPdp {
+  margin-bottom: 16px;
+}
+
+/* Clear floats after the columns */
+.rowPdp:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* =============================== */
