@@ -1,0 +1,10 @@
+.alignFlex {
+    display: flex;
+    margin: 0 10px auto;
+}
+
+.thumbImg {
+    width: 40px;
+    height: 40px;
+    margin: 0 4px;
+}
