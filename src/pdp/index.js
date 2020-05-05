@@ -1,6 +1,5 @@
 import React from "react";
 import ReactImageMagnify from "react-image-magnify";
-import Carousel from "nuka-carousel";
 import Thumbnail from "./thumbnail";
 import img from "./image.json";
 import "./index.css";
@@ -22,7 +21,7 @@ class Pdp extends React.Component {
               <ReactImageMagnify
                 {...{
                   smallImage: {
-                    alt: "Wristwatch by Ted Baker London",
+                    alt: "",
                     isFluidWidth: false,
                     width: 300,
                     height: 300,
@@ -32,7 +31,6 @@ class Pdp extends React.Component {
                     src: img.img[this.state.imgIndex].enlargedImg,
                     width: 600,
                     height: 600,
-                    className: "imgPdp",
                   },
                 }}
               />
@@ -89,7 +87,7 @@ class Pdp extends React.Component {
           </div>
         </div>
         <div className="mblViewCn">
-          <Carousel
+          {/* <Carousel
             renderCenterLeftControls={null}
             renderCenterRightControls={null}
           >
@@ -101,7 +99,31 @@ class Pdp extends React.Component {
               src="https://via.placeholder.com/400/ffffff/c0392b/&text=slide2"
               alt=""
             />
-          </Carousel>
+          </Carousel> */}
+          <div className="imgMaginify">
+            <ReactImageMagnify
+              {...{
+                smallImage: {
+                  alt: "",
+                  isFluidWidth: false,
+                  width: 300,
+                  height: 300,
+                  src: img.img[this.state.imgIndex].enlargedImg,
+                },
+                largeImage: {
+                  src: img.img[this.state.imgIndex].enlargedImg,
+                  width: 600,
+                  height: 600,
+                },
+              }}
+            />
+          </div>
+          <div className="thumbnailCss">
+            <Thumbnail
+              thumbnailsArr={img.img}
+              showExpandedImage={this.showExpandedImage}
+            />
+          </div>
           <div className="mbPdpView">
             <div className="pdpTitle">Curry leafs</div>
             <span className="pdp_price">$100</span>

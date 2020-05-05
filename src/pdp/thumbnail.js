@@ -111,20 +111,6 @@ class Thumbnail extends PureComponent<Props, State> {
   }
 
   render() {
-    const thumbNails = this.props.thumbnailsArr.length <= 5;
-    let hideArrowStyle = "";
-    const disableLeft = this.state.disableLeft;
-    const disableRight = this.state.disableRight;
-    let disabledArrow = "";
-
-    if (thumbNails) {
-      hideArrowStyle = "";
-    }
-
-    if (disableLeft || disableRight) {
-      disabledArrow = "";
-    }
-
     return (
       <div className="alignFlex">
         <div
@@ -133,13 +119,7 @@ class Thumbnail extends PureComponent<Props, State> {
           disabled={this.state.disableLeft}
           className="alignFlex"
         >
-          {/* <img
-            src={imageConstant.leftArrowCarousel.src}
-            alt={imageConstant.leftArrowCarousel.alt}
-            title={imageConstant.leftArrowCarousel.alt}
-            className={disabledArrow}
-          /> */}
-          <span>left</span>
+          <span className={this.state.disableLeft && "disabledPt"}>Left</span>
         </div>
 
         <div className="alignFlex">
@@ -165,13 +145,7 @@ class Thumbnail extends PureComponent<Props, State> {
           disabled={this.state.disableRight}
           className="alignFlex"
         >
-          {/* <img
-            src={imageConstant.rightArrow.src}
-            alt={imageConstant.rightArrow.alt}
-            title={imageConstant.rightArrow.alt}
-            
-          /> */}
-          <span>Right</span>
+          <span className={this.state.disableRight && "disabledPt"}>right</span>
         </div>
       </div>
     );

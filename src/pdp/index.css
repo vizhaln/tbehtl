@@ -1,12 +1,3 @@
-.imgPdp {
-  width: 250px;
-  height: 250px;
-  padding: 10px;
-}
-
-.imgPdpView {
-  text-align: center;
-}
 
 /* ===Add to Bag start=== */
 
@@ -184,4 +175,8 @@ input[type="submit"] {
 .thumbnailCss {
   text-align: center;
   margin-top: 20px;
+}
+
+.imgMaginify {
+  margin: 0 auto;
 }
